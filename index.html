@@ -3,22 +3,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/73b6b0c7/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Patua+One|Bree+Serif" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section id="quote" style="background: #fff;">
-    <div id="quote__text">Quote</div>
-    <div id="quote__author">Author</div>
-</section>
-
-<section>
-    <button id="get-quote">New quote</button>
-    <button id="tweet">Tweet quote</button>
-</section>
+<div id="quote" class="quote">
+    <div class="quote__container">
+        <p class="quote__mark">❛❛</p>
+        <div id="quote__text">Quote</div>
+        <div id="quote__author" class="quote__author">Author</div>
+        <div class="buttons">
+            <a href="#" id="button-tweet" class="button">Tweet it</a>
+            <a href="#" id="button-update" class="button">Next one</a>
+        </div>
+    </div>
+</div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/Fooidge/PleaseJS/master/dist/Please.js"></script>
+<script src="https://cdn.rawgit.com/Fooidge/PleaseJS/bb4631ba/dist/Please.js"></script>
 <script src="script.js"></script>
 </html>

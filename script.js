@@ -18,6 +18,9 @@ var updateQuote = function() {
         var author = quoteObject.title;
         $('#quote__text').html(quote);
         $('#quote__author').html(author);
+        // update tweet url
+        var tweetText = ('"' + $('#quote__text').text().trim() + '" ' + $('#quote__author').text().trim()).replace(/\s+/g, ' ');
+        $('#button-tweet').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&text=' + tweetText);
         // update color using Please.js
         // http://www.checkman.io/please/
         var color = Please.make_color()[0]; 

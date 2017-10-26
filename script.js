@@ -31,16 +31,21 @@ var updateQuote = function() {
         $('body').css('background-color', color);
         // adjust font size for long text
         var fontSize = '100%';
-        if (quote.length > 400) fontSize = '50%';
-        else if (quote.length > 350) fontSize = '55%';
-        else if (quote.length > 300) fontSize = '60%';
-        else if (quote.length > 250) fontSize = '75%';
-        else if (quote.length > 200) fontSize = '70%';
-        else if (quote.length > 150) fontSize = '75%';
-        else if (quote.length > 100) fontSize = '80%';
+        if (quote.length > 500 || quote.lineBreaks() > 15) fontSize = '30%';
+        else if (quote.length > 400 || quote.lineBreaks() > 10) fontSize = '50%';
+        else if (quote.length > 350 || quote.lineBreaks() > 8) fontSize = '55%';
+        else if (quote.length > 300 || quote.lineBreaks() > 7) fontSize = '60%';
+        else if (quote.length > 250 || quote.lineBreaks() > 6) fontSize = '75%';
+        else if (quote.length > 200 || quote.lineBreaks() > 5) fontSize = '70%';
+        else if (quote.length > 150 || quote.lineBreaks() > 4) fontSize = '75%';
+        else if (quote.length > 100 || quote.lineBreaks() > 3) fontSize = '80%';
         $('#quote__content').css('font-size', fontSize);
         // restore quote size
         $('#quote').removeClass('quote--collapsed');
         $('#quote__container').removeClass('quote__container--collapsed');
         });
 };
+
+String.prototype.lineBreaks = function() {
+    return (this.match(/\<br\>/g) || []).length;
+}

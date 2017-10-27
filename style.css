@@ -3,7 +3,7 @@
 }
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: 0.5s ease-in background-color;
     background-color: #ddd;
 }
@@ -101,7 +101,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .2s ease-in opacity;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .quote__container--collapsed {

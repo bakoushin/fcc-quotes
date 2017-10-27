@@ -100,7 +100,6 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .2s ease-in opacity;
-    /* overflow: hidden; */
 }
 
 .quote__container--collapsed {
@@ -140,4 +139,28 @@ p {
     text-decoration: none;
     text-transform: uppercase;
     margin: 0;
+}
+
+/* BUTTONS */
+
+.author {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 60%;
+    /* background: rgba(0,0,0,.2); */
+    padding-top: 110%;
+    width: 100%;
+    z-index: -100;
+}
+
+.author__link,
+.author__link:link,
+.author__link:visited,
+.author__link:hover,
+.author__link:active {
+    color: #fff;
 }
